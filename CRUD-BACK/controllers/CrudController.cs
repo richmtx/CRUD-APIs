@@ -16,14 +16,14 @@ namespace CRUD_BACK.Controllers
             _context = context;
         }
 
-        // GET: api/Crud
+        // GET
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Crud>>> GetAll()
         {
             return await _context.CRUD.ToListAsync();
         }
 
-        // GET: api/Crud/123
+        // GET
         [HttpGet("{numero_control}")]
         public async Task<ActionResult<Crud>> GetById(string numero_control)
         {
@@ -35,7 +35,7 @@ namespace CRUD_BACK.Controllers
             return registro;
         }
 
-        // POST: api/Crud
+        // POST
         [HttpPost]
         public async Task<ActionResult<Crud>> Create(Crud crud)
         {
@@ -46,7 +46,7 @@ namespace CRUD_BACK.Controllers
                 new { numero_control = crud.numero_control }, crud);
         }
 
-        // PUT: api/Crud/123
+        // PUT
         [HttpPut("{numero_control}")]
         public async Task<IActionResult> Update(string numero_control, Crud crud)
         {
@@ -59,7 +59,7 @@ namespace CRUD_BACK.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Crud/123
+        // DELETE
         [HttpDelete("{numero_control}")]
         public async Task<IActionResult> Delete(string numero_control)
         {

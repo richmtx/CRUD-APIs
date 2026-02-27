@@ -11,7 +11,7 @@ namespace CRUD_BACK.Controllers
         {
             return Ok(new
             {
-                mensaje = "Endpoint funcionando correctamente 🚀"
+                mensaje = "Endpoint funcionando correctamente "
             });
         }
     }
