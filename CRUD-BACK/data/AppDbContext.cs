@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using CRUD_BACK.Models;
 
 namespace CRUD_BACK.Data
 {
@@ -9,8 +10,6 @@ namespace CRUD_BACK.Data
         {
         }
 
-        // Aquí irán tus tablas
-        // Ejemplo:
-        // public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Crud> CRUD { get; set; }
     }
 }
